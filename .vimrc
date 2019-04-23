@@ -10,10 +10,6 @@
 "  https://www.youtube.com/watch?v=JVpxDuxe1eY (Setting up .vimrc and Vundle)
 " -----------------------------------------------------------------------------
 
-
-" -----------------------------------------------------------------------------
-" Vundle:
-" -----------------------------------------------------------------------------
 set nocompatible
 filetype off                  
 
@@ -38,13 +34,11 @@ filetype plugin indent on
 " -----------------------------------------------------------------------------
 " Vim Appearance:
 " -----------------------------------------------------------------------------
-"colorscheme            " don't have a colorscheme yet
-                        " colorscheme files go in ~/.vim/colors/
-
+colorscheme dracula
 
 syntax enable           " enables syntax highlighting
 set background=dark     " configs Vim to user brighter colors
-set showcmd	            " shows the command at the bottom
+set showcmd             " shows the command at the bottom
 set cmdheight=2         " sets cmd window height to 2 lines
 
 
@@ -70,19 +64,19 @@ set confirm             " instead of failing a command, asks to save
 " -----------------------------------------------------------------------------
 " Tab Settings:
 " -----------------------------------------------------------------------------
-set tabstop=4			" sets tab length
-set shiftwidth=4		" sets num of spaces in tab
-set expandtab			" turns tabs into spaces
+set tabstop=4           " sets tab length
+set shiftwidth=4        " sets num of spaces in tab
+set expandtab           " turns tabs into spaces
 
-set autoindent			" copy indent from current line when starting a new line
-set smartindent			" apparently even better autoindent (adds indent after '{')
+set autoindent          " copy indent from current line when starting a new line
+set smartindent         " apparently even better autoindent (adds indent after '{')
 
 
 " -----------------------------------------------------------------------------
 " Search Settings:
 " -----------------------------------------------------------------------------
-set incsearch			" search as character are entered
-set hlsearch			" highlights search matches
+set incsearch           " search as character are entered
+set hlsearch            " highlights search matches
 set ignorecase          " uses case sensitive search
 set smartcase           " except when using capital letters
 

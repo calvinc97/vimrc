@@ -29,7 +29,7 @@ Plugin 'surround.vim'
 Plugin 'The-NERD-tree'
 
 " All Plugins must be added before the following line
-call vundle#end()            " required
+call vundle#end()
 
 " auto indent for each filetype and for filetype specific plugins
 filetype plugin indent on
@@ -38,38 +38,34 @@ filetype plugin indent on
 " -----------------------------------------------------------------------------
 " Vim Appearance:
 " -----------------------------------------------------------------------------
-"colorscheme			" don't have a colorscheme yet
+"colorscheme            " don't have a colorscheme yet
                         " colorscheme files go in ~/.vim/colors/
 
 
-syntax enable			" enables syntax highlighting
-set background=dark		" configs Vim to user brighter colors
-set showcmd				" shows the command at the bottom
+syntax enable           " enables syntax highlighting
+set background=dark     " configs Vim to user brighter colors
+set showcmd	            " shows the command at the bottom
 set cmdheight=2         " sets cmd window height to 2 lines
 
 
 " -----------------------------------------------------------------------------
 " Basic Behaviours:
 " -----------------------------------------------------------------------------
-set number				" shows line number
-set autoread			" autoreload if file was changed outside of Vim
-set mouse=a				" enable mouse support (doesn't work well on Mac Terminal)
-set wildmenu			" visual autocompete for command menu
-set lazyredraw			" redraw only when need to
-set showmatch			" highlight matching parenthesis characters [{()}]
-set statusline=2		" always show statusline (even with only a single window)
-set ruler				" show line & column number of the curser on status line
+set number              " shows line number
+set autoread            " autoreload if file was changed outside of Vim
+set mouse=a             " enable mouse support (doesn't work well on Mac Terminal)
+set wildmenu            " visual autocompete for command menu
+set lazyredraw          " redraw only when need to
+set showmatch           " highlight matching parenthesis characters [{()}]
+set statusline=2        " always show statusline (even with only a single window)
+set ruler               " show line & column number of the curser on status line
 
-set visualbell			" blinks cursor upon error instead of beeping
+set visualbell          " blinks cursor upon error instead of beeping
 set t_vb=               " if above is set, will neither flash nor beep 
 
 set nostartofline       " stops certain movements from going to first character of line
 set confirm             " instead of failing a command, asks to save  
 
-" miscellaneous configurations
-"set relativenumber     " shows line numbers relative to current line
-"set cursorline			" highlights the current line
-"set wrap				" wrap lines
 
 " -----------------------------------------------------------------------------
 " Tab Settings:
@@ -94,7 +90,5 @@ set smartcase           " except when using capital letters
 " -----------------------------------------------------------------------------
 " Keymaps:
 " -----------------------------------------------------------------------------
-
-" Ctrl+n to NERDTree
 map <C-n> :NERDTreeToggle<CR>  
 

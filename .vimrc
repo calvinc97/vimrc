@@ -17,12 +17,19 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" for tabline
+let g:airline#extensions#tabline#enabled = 1
+
 " let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'surround.vim'
 Plugin 'The-NERD-tree'
+Plugin 'Syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
 
 " All Plugins must be added before the following line
 call vundle#end()
@@ -31,34 +38,38 @@ call vundle#end()
 filetype plugin indent on
 
 
+
 " -----------------------------------------------------------------------------
 " Vim Appearance:
 " -----------------------------------------------------------------------------
 set t_Co=256            " enables 256 colors
+set termguicolors       " true color mode
+set background=dark     " configs Vim to user brighter colors
 
-colorscheme dracula
+colorscheme nord     
 
 syntax on               " enables syntax highlighting
-set background=dark     " configs Vim to user brighter colors
+set number              " shows line number
 set showcmd             " shows the command at the bottom
 set cmdheight=2         " sets cmd window height to 2 lines
 
-" enables the cursor line
-set cursorline
+set ruler               " show line & column number of the curser on status line
+
+set cursorline          " enables the cursor line
+
+" will only highlight the line number
 highlight clear CursorLine
 
 
 " -----------------------------------------------------------------------------
 " Basic Behaviours:
 " -----------------------------------------------------------------------------
-set number              " shows line number
 set autoread            " autoreload if file was changed outside of Vim
 set mouse=a             " enable mouse support (doesn't work well on Mac Terminal)
 set wildmenu            " visual autocompete for command menu
 set lazyredraw          " redraw only when need to
 set showmatch           " highlight matching parenthesis characters [{()}]
 set statusline=2        " always show statusline (even with only a single window)
-set ruler               " show line & column number of the curser on status line
 
 set visualbell          " blinks cursor upon error instead of beeping
 set t_vb=               " if above is set, will neither flash nor beep 

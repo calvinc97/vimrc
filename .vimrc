@@ -34,12 +34,18 @@ filetype plugin indent on
 " -----------------------------------------------------------------------------
 " Vim Appearance:
 " -----------------------------------------------------------------------------
+set t_Co=256            " enables 256 colors
+
 colorscheme dracula
 
-syntax enable           " enables syntax highlighting
+syntax on               " enables syntax highlighting
 set background=dark     " configs Vim to user brighter colors
 set showcmd             " shows the command at the bottom
 set cmdheight=2         " sets cmd window height to 2 lines
+
+" enables the cursor line
+set cursorline
+highlight clear CursorLine
 
 
 " -----------------------------------------------------------------------------

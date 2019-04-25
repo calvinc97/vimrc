@@ -1,24 +1,25 @@
-" -----------------------------------------------------------------------------
+" *****************************************************************************
 "  File         : .vimrc
 "  Author       : Calvin Cheung
 "  Created      : 2019-04-22     
-"  Updated      : 2019-04-23
+"  Updated      : 2019-04-24
 
 "  Useful Sources:
 "  https://dougblack.io/words/a-good-vimrc.html
 "  https://github.com/VundleVim/Vundle.vim
 "  https://www.youtube.com/watch?v=JVpxDuxe1eY (Setting up .vimrc and Vundle)
-" -----------------------------------------------------------------------------
+" *****************************************************************************
 
+
+" -----------------------------------------------------------------------------
+" Vundle:
+" -----------------------------------------------------------------------------
 set nocompatible
 filetype off                  
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-" for tabline
-let g:airline#extensions#tabline#enabled = 1
 
 " let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
@@ -37,21 +38,18 @@ call vundle#end()
 " auto indent for each filetype and for filetype specific plugins
 filetype plugin indent on
 
-
-
 " -----------------------------------------------------------------------------
 " Vim Appearance:
 " -----------------------------------------------------------------------------
-set t_Co=256            " enables 256 colors
-set termguicolors       " true color mode
-set background=dark     " configs Vim to user brighter colors
+set t_Co=256            " using WSLtty, enables 256 colors in vim
+set background=dark     " configs Vim to use brighter colors
 
 colorscheme nord     
 
 syntax on               " enables syntax highlighting
 set number              " shows line number
 set showcmd             " shows the command at the bottom
-set cmdheight=2         " sets cmd window height to 2 lines
+set cmdheight=1         " sets cmd window height to 2 lines
 
 set ruler               " show line & column number of the curser on status line
 
@@ -59,7 +57,6 @@ set cursorline          " enables the cursor line
 
 " will only highlight the line number
 highlight clear CursorLine
-
 
 " -----------------------------------------------------------------------------
 " Basic Behaviours:
@@ -77,7 +74,6 @@ set t_vb=               " if above is set, will neither flash nor beep
 set nostartofline       " stops certain movements from going to first character of line
 set confirm             " instead of failing a command, asks to save  
 
-
 " -----------------------------------------------------------------------------
 " Tab Settings:
 " -----------------------------------------------------------------------------
@@ -88,7 +84,6 @@ set expandtab           " turns tabs into spaces
 set autoindent          " copy indent from current line when starting a new line
 set smartindent         " apparently even better autoindent (adds indent after '{')
 
-
 " -----------------------------------------------------------------------------
 " Search Settings:
 " -----------------------------------------------------------------------------
@@ -97,6 +92,14 @@ set hlsearch            " highlights search matches
 set ignorecase          " uses case sensitive search
 set smartcase           " except when using capital letters
 
+" -----------------------------------------------------------------------------
+" Plugin Configs:
+" -----------------------------------------------------------------------------
+
+" for airline
+let g:airline_theme='nord'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " -----------------------------------------------------------------------------
 " Keymaps:

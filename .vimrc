@@ -95,7 +95,6 @@ set smartcase           " except when using capital letters
 " -----------------------------------------------------------------------------
 " Plugin Configs:
 " -----------------------------------------------------------------------------
-
 " for airline
 let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1

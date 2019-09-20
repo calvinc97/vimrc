@@ -2,7 +2,7 @@
 "  File         : .vimrc
 "  Author       : Calvin Cheung
 "  Created      : 2019-04-22     
-"  Updated      : 2019-04-24
+"  Updated      : 2019-09-20
 
 "  Useful Sources:
 "  https://dougblack.io/words/a-good-vimrc.html
@@ -25,12 +25,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-Plugin 'surround.vim'
-Plugin 'The-NERD-tree'
-Plugin 'Syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'itchyny/lightline.vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'arcticicestudio/nord-vim'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 
 " All Plugins must be added before the following line
 call vundle#end()
@@ -95,10 +97,16 @@ set smartcase           " except when using capital letters
 " -----------------------------------------------------------------------------
 " Plugin Configs:
 " -----------------------------------------------------------------------------
-" for airline
-let g:airline_theme='nord'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+" Lightline:
+set laststatus=2
+let g:lightline = {
+    \ 'colorscheme': 'nord',
+    \ }
+
+" Airline:
+" let g:airline_theme='nord'
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " -----------------------------------------------------------------------------
 " Keymaps:

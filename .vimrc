@@ -1,8 +1,9 @@
+
 " *****************************************************************************
 "  File         : .vimrc
 "  Author       : Calvin Cheung
 "  Created      : 2019-04-22     
-"  Updated      : 2019-09-20
+"  Updated      : 2019-10-14
 
 "  Useful Sources:
 "  https://dougblack.io/words/a-good-vimrc.html
@@ -31,6 +32,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/lightline.vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'dracula/vim', {'name':'dracula'}
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 
@@ -46,7 +48,8 @@ filetype plugin indent on
 set t_Co=256            " using WSLtty, enables 256 colors in vim
 set background=dark     " configs Vim to use brighter colors
 
-colorscheme nord     
+au ColorScheme * hi Normal ctermbg=None
+colorscheme dracula     
 
 syntax on               " enables syntax highlighting
 set number              " shows line number
@@ -100,7 +103,7 @@ set smartcase           " except when using capital letters
 " Lightline:
 set laststatus=2
 let g:lightline = {
-    \ 'colorscheme': 'nord',
+    \ 'colorscheme': 'dracula',
     \ }
 
 " Airline:

@@ -1,0 +1,57 @@
+Urxvt*termName:             screen-256color
+
+URxvt*scrollBar:		    false
+URxvt*scrollWithBuffer:		true
+URxvt*secondaryScreen:		1
+URxvt*secondaryScroll:		0
+
+URxvt.font:			        xft:Source Code Pro:medium:size=12
+URxvt.letterSpace:		    -1
+Xft.dpi:			        96
+Xft.lcdfilter:			    lcddefault
+Xft.hintstyle:			    hintslight
+Xft.hinting:			    1
+Xft.antialias:			    1
+Xft.rgba:			        rgb
+
+URxvt.loginShell:		    true
+
+URxvt.perl-ext-common:		    keyboard-select,url-select,clipboard
+URxvt.keysym.M-Escape:		    perl:keyboard-select:activate
+URxvt.keysym.M-u:		        perl:url-select:select_next
+URxvt.url-select.autocopy:	    true
+URxvt.url-select.button:	    1
+URxvt.url-select.launcher:  	/usr/bin/google-chrome-stable
+URxvt.url-select.underline:	    true
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.clipboard.autocopy:       true
+
+URxvt.saveLines:		    2000
+URxvt.fading:			    0
+URxvt.internalBorder:		8
+Xcursor.theme: xcursor-breeze
+Xcursor.size:			    8
+
+!+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
